@@ -33,9 +33,17 @@ public class main {
 
         System.out.println("A lista de filmes tem tamanho: \n" + moviesList.size() + "\n Acompanhe a lista");
         for (Map<String, String> movies: moviesList) {
-            System.out.println("Este é o filme: ");
-            System.out.println(movies.get("title"));
+            System.out.println("\u001b[1mEste é o filme: ");
+            System.out.println("\u001b[1m \u001b[3mTítulo:\u001b[m" + movies.get("title"));
             System.out.println(movies.get("imDbRating"));
+            double numberStars = Double.parseDouble(movies.get("imDbRating"));
+            int rating = (int) numberStars;
+
+            System.out.println();
+
+            for(int i = 0; i <= rating; i++){
+                System.out.print("💛");
+            }
             System.out.println();
         }
     }
