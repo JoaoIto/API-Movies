@@ -102,3 +102,34 @@ as informações que realmente são necessárias para a exibição, aquela filtr
             System.out.println();
         }
 ````
+
+---
+
+## Exibição no console:
+
+Perceba que, na visualização de filmes, temos diversos, e ainda sim
+suas informações estão sendo colocadas de forma "porca" e mais feia! Vamos
+resolver este problema dentro do código na exibição das informações em negrito
+e ainda uma forma inteligente de fazer com que o código exiba emojis de rating
+para cada filme!
+
+````java
+            // Esibe a nota do filme;
+            System.out.println(movies.get("imDbRating"));
+            // Captura o número do rating;
+            double numberStars = Double.parseDouble(movies.get("imDbRating"));
+            // transforma em (int) para exibição do rating em emojis inteiros;
+            int rating = (int) numberStars;
+
+            System.out.println();
+
+            // for(), código de repetição para exibição dos emojis;
+                    // referente ao inteiro de rating
+            for(int i = 0; i <= rating; i++){
+                System.out.print("💛");
+            }
+            System.out.println();
+        }
+````
+
+---
