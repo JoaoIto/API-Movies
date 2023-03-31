@@ -1,6 +1,6 @@
 # API de filmes [IMDB](https://www.imdb.com/chart/top/)
 
-Aplicação feita na ***Imersão Alura***, para a buscagem de rotas para uma API de filmes, desenvolvida em Java! Confira o código.
+Vamos construir uma aplicação do zero da ***Imersão Alura*** para consumir a API do IMDb e exibir os filmes mais populares, destacando seus pôsteres e visualizando sua classificação... Tudo isso sem usar nenhuma biblioteca externa!
 
 ## Sobre
 
