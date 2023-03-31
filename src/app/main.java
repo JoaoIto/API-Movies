@@ -1,6 +1,6 @@
 package src.app;
 
-import src.classes.JsonParser;
+import src.classes.parser.JsonParser;
 
 import java.io.IOException;
 import java.net.URI;

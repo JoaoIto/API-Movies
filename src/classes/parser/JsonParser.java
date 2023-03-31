@@ -1,4 +1,4 @@
-package src.classes;
+package src.classes.parser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
