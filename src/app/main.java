@@ -30,7 +30,13 @@ public class main {
         //Listagem de filmes:
         JsonParser parser = new JsonParser();
         List<Map<String, String>> moviesList = parser.parse(body);
+
         System.out.println("A lista de filmes tem tamanho: \n" + moviesList.size() + "\n Acompanhe a lista");
-        System.out.println(moviesList.get(0));
+        for (Map<String, String> movies: moviesList) {
+            System.out.println("Este é o filme: ");
+            System.out.println(movies.get("title"));
+            System.out.println(movies.get("imDbRating"));
+            System.out.println();
+        }
     }
 }
