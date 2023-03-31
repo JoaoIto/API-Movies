@@ -8,6 +8,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
+import java.util.Map;
 
 public class main {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -24,10 +25,12 @@ public class main {
         String body = response.body();
 
         // Exibindo na tela o corpo da requisição;
-        System.out.println(body);
+        // -> System.out.println(body);
 
         //Listagem de filmes:
         JsonParser parser = new JsonParser();
         List<Map<String, String>> moviesList = parser.parse(body);
+        System.out.println("A lista de filmes tem tamanho: \n" + moviesList.size() + "\n Acompanhe a lista");
+        System.out.println(moviesList.get(0));
     }
 }
