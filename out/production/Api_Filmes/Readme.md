@@ -10,15 +10,11 @@ de filmes do IMDB, sua capa, póster, chamada para o chamado ***Alura Stickers**
 ## Código de ***`request(), send(), response()`***:
 
 ````java
-        // Salvando variável para locação da API web;
         String urlAPI = "https://raw.githubusercontent.com/alura-cursos/imersao-java-2-api/main/TopMovies.json";
 
-        // Colocando em uma variável de API;
         URI httpAdress = URI.create(urlAPI);
-        // Colocando em métodop de HTTPClient;
         var client = HttpClient.newHttpClient();
-        
-        // E aqui o corpo da requisição para a API;
+
         HttpRequest request = HttpRequest.newBuilder(httpAdress).GET().build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String body = response.body();
@@ -28,5 +24,3 @@ de filmes do IMDB, sua capa, póster, chamada para o chamado ***Alura Stickers**
 }
 
 ````
-
----
