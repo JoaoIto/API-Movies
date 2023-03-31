@@ -18,10 +18,10 @@ public class Stickers {
         int width = image.getWidth();
         int oldHeight = image.getHeight();
         int height = oldHeight + 200;
-        BufferedImage novaImagem = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);
+        BufferedImage newImg = new BufferedImage(width, height, BufferedImage.TRANSLUCENT);
 
         // copiar a imagem original para novo imagem (em memória);
-        Graphics2D graphics = (Graphics2D) novaImagem.getGraphics();
+        Graphics2D graphics = (Graphics2D) newImg.getGraphics();
         graphics.drawImage(image, 0, 0, null);
 
         // configurar a fonte
@@ -33,6 +33,6 @@ public class Stickers {
         graphics.drawString("TOPZERA", 100, height - 100);
 
         // escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File(fileName));
+        ImageIO.write(newImg, "png", new File(fileName));
     }
 }
