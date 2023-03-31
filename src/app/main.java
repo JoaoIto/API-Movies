@@ -1,9 +1,12 @@
 package src.app;
 
 import src.classes.parser.JsonParser;
+import src.classes.stickers.Stickers;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -44,6 +47,22 @@ public class main {
             for(int i = 0; i <= rating; i++){
                 System.out.print("💛");
             }
+            System.out.println();
+        }
+
+        // exibir e manipular os dados
+        var createrStickers = new Stickers();
+        for (Map<String,String> filme : moviesList) {
+
+            String imgURL = filme.get("image");
+            String title = filme.get("title");
+
+            InputStream inputStream = new URL(imgURL).openStream();
+            String fileName = title + ".png";
+
+            createrStickers.create(inputStream, fileName);
+
+            System.out.println(title);
             System.out.println();
         }
     }
